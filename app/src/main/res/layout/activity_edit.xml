@@ -1,0 +1,107 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".edit">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back2"
+        android:contentDescription="Back Button"
+        android:onClick="onBackButtonClick"/>
+
+    <!-- Edit Profile Text -->
+
+    <!-- Line Below Back Button -->
+
+    <TextView
+        android:id="@+id/editProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:text="Edit profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/lineBelowBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageButton2"
+        android:layout_marginTop="8dp"
+        android:background="#CCCCCC" />
+
+    <!-- Edit Profile Container -->
+    <RelativeLayout
+        android:id="@+id/editProfileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineBelowBackButton"
+        android:layout_marginTop="30dp">
+
+        <!-- Current Profile Photo -->
+        <ImageView
+            android:id="@+id/currentProfilePhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="false"
+            android:src="@drawable/user" />
+
+        <!-- Edit Picture Text -->
+        <TextView
+            android:id="@+id/editPictureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/currentProfilePhoto"
+            android:layout_marginStart="8dp"
+            android:text="Edit picture or avatar"
+            android:textColor="#FFA500"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Your New Name -->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/currentProfilePhoto"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Your New Name" />
+
+        <!-- Your New Bio -->
+        <EditText
+            android:id="@+id/editBio"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/editName"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Your New Bio" />
+    </RelativeLayout>
+
+    <!-- Save Button -->
+    <android.widget.Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editProfileContainer"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_rectangle"
+        android:onClick="onSaveButtonClick"
+        android:text="Save" />
+
+</RelativeLayout>

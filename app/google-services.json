@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911041511739",
+    "project_id": "travary-firebase",
+    "storage_bucket": "travary-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911041511739:android:a7ae8aac4ac4bd7ca5b71e",
+        "android_client_info": {
+          "package_name": "com.mobdeve.s11.patawaran.yuan.dummy2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQAdgNy9tnho4ezUijLzO6likXBriL-ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

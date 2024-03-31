@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".homePage"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="145dp"
+                android:layout_height="113dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="left"
+                android:layout_marginStart="9dp"
+                android:contentDescription="Description for your image"
+                android:src="@drawable/icon" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="Search Button"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/search" />
+
+            <!-- Line Separator -->
+            <View
+                android:id="@+id/lineSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/searchButton"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/black" />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineSeparator"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

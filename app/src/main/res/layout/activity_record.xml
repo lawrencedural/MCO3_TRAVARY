@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ImageButton for back -->
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/back2"
+        android:contentDescription="Back Button"
+        android:layout_marginStart="16dp"
+        tools:ignore="ContentDescription"
+        />
+
+    <!-- Text "New Post" -->
+    <TextView
+        android:id="@+id/textNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageButton2"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/imageButton2"
+        android:fontFamily="sans-serif-black"
+        android:text="New Post"
+        android:textSize="24sp" />
+
+    <!-- View for separator line -->
+    <View
+        android:id="@+id/lineSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imageButton2"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/black" />
+
+    <!-- ImageView for displaying map screenshot -->
+    <ImageView
+        android:id="@+id/mapScreenshotImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/lineSeparator"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/editCaption"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/mapScreenshotImageView"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Write a caption" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/editCaption"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Add Location" />
+
+    <!-- Container for holding photos -->
+    <LinearLayout
+        android:id="@+id/photoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLocation"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <!-- Placeholder for photo 1 -->
+        <ImageView
+            android:id="@+id/photo1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/emptyphoto"
+            android:scaleType="centerCrop" />
+
+        <!-- Placeholder for photo 2 -->
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/emptyphoto"
+            android:scaleType="centerCrop" />
+
+        <!-- Placeholder for photo 3 -->
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/emptyphoto"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <!-- Capture button -->
+    <Button
+        android:id="@+id/captureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photoContainer"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_rectangle"
+        android:text="Capture" />
+
+    <!-- Post button -->
+    <Button
+        android:id="@+id/buttonPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/captureButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_rectangle"
+        android:text="Post" />
+    <!-- RecyclerView to display posts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonPost"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
